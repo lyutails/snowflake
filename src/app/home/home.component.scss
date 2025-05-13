@@ -1,0 +1,68 @@
+.not_found {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../../public/pics/shrine-bamboo-lantern-night-snow-torii-winter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &_wrapper {
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &_text {
+    transform: translateY(40vh);
+    background-image: linear-gradient(90deg, coral, purple);
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 10px whitesmoke) drop-shadow(0 0 20px whitesmoke);
+
+    &.status {
+      font-size: 4rem;
+      font-weight: 900;
+    }
+
+    &.message {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    &.link {
+      font-size: 3rem;
+      font-weight: 700;
+      background-color: transparent;
+      border: none;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 10px whitesmoke) drop-shadow(0 0 20px whitesmoke);
+      border-bottom: 2px solid purple;
+      animation-name: goHomeAnim;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes goHomeAnim {
+  0% {
+    background-image: url("../../../public/pics/gradient_sunrise.png");
+    border-bottom: 2px solid purple;
+    transition: all 0.2s ease-in-out;
+  }
+  50% {
+    background-image: url("../../../public/pics/gradient_cold.png");
+    border-bottom: 2px solid darkblue;
+    transition: all 0.2s ease-in-out;
+  }
+  100% {
+    background-image: url("../../../public/pics/gradient_sunrise.png");
+    border-bottom: 2px solid purple;
+    transition: all 0.2s ease-in-out;
+  }
+}
