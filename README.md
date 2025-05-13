@@ -8,6 +8,8 @@ https://snowflake-beta.vercel.app/
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
 
+<img src="./public/pics/home_page.JPG">
+
 ## Development server
 
 To start a local development server, run:
