@@ -2,10 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 import { provideHttpClient } from '@angular/common/http';
+import { SnowflakeComponent } from '../threejs/snowflake/snowflake.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
+  let snowflakeComponent: SnowflakeComponent;
+  let snowflakeFixture: ComponentFixture<SnowflakeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -16,6 +19,9 @@ describe('HomeComponent', () => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    snowflakeFixture = TestBed.createComponent(SnowflakeComponent);
+    snowflakeComponent = snowflakeFixture.componentInstance;
+    snowflakeFixture.detectChanges();
   });
 
   it('should create', () => {
@@ -24,7 +30,9 @@ describe('HomeComponent', () => {
 
   it('should contain text "If no such route out there - try another way" on the page', () => {
     const text: HTMLElement = fixture.nativeElement;
-    expect(text.textContent).toContain('If no such route out there - try another way');
+    expect(text.textContent).toContain(
+      'If no such route out there - try another way'
+    );
   });
 
   it('should contain text "or go home" on the page', () => {
@@ -35,5 +43,9 @@ describe('HomeComponent', () => {
   it('should contain text "404" on the page', () => {
     const text: HTMLElement = fixture.nativeElement;
     expect(text.textContent).toContain('404');
+  });
+
+  it('should contain Snowflake Component on the page', () => {
+    expect(snowflakeComponent).toBeTruthy();
   });
 });
