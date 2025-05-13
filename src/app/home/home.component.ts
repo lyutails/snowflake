@@ -11,4 +11,5 @@ export class HomeComponent {
   status = '404';
   message = 'If no such route out there - try another way';
   link = 'or go home';
+  backgroundImageURL = `url("./pics/shrine-bamboo-lantern-night-snow-torii-winter.jpg")`
 }
