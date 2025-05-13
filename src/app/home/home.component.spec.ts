@@ -48,4 +48,25 @@ describe('HomeComponent', () => {
   it('should contain Snowflake Component on the page', () => {
     expect(snowflakeComponent).toBeTruthy();
   });
+
+  it('should contain text background image on the page', () => {
+    const backgroundDiv: HTMLElement = fixture.nativeElement;
+    const divWithBackgroundImage = backgroundDiv.querySelector('.not_found') as HTMLButtonElement;
+    expect(divWithBackgroundImage?.style.backgroundImage).toBe(
+      `url("./pics/shrine-bamboo-lantern-night-snow-torii-winter.jpg")`
+    );
+  });
+
+  /* it(`should have the 'snowflake' title`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('snowflake');
+  });
+
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, snowflake');
+  }); */
 });
