@@ -9,6 +9,6 @@ import { SnowflakeComponent } from '../threejs/snowflake/snowflake.component';
 })
 export class HomeComponent {
   status = '404';
-  message = 'No such route out there, try another way';
+  message = 'If no such route out there - try another way';
   link = 'or go home';
 }

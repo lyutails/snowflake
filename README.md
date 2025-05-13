@@ -4,6 +4,8 @@ https://snowflake-beta.vercel.app/
 
 ## Snowflake <img src="./public/snowflake.ico"  width="30" height="30">
 
+3D object implementation with Angular and three js
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
 
 ## Development server
